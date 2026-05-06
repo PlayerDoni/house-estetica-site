@@ -123,6 +123,8 @@
       margin-bottom:25px;
       font-size:.85rem;
       background:rgba(212,175,55,.08);
+      position:relative;
+      z-index:2;
     }
 
     .hero h1{
@@ -187,20 +189,23 @@
       color:#000;
     }
 
-    /* HERO LOGO */
+    /* HERO BACKGROUND LOGO */
 
     .hero-bg-logo{
       position:absolute;
-      right:40px;
+      left:50%;
       top:50%;
-      transform:translateY(-50%);
+      transform:translate(-50%,-50%);
       z-index:1;
       pointer-events:none;
+      width:100%;
+      display:flex;
+      justify-content:center;
     }
 
     .hero-bg-logo img{
-      width:700px;
-      opacity:.35;
+      width:650px;
+      opacity:.22;
       object-fit:contain;
     }
 
@@ -375,7 +380,7 @@
       font-size:.92rem;
     }
 
-    /* WHATSAPP FLOAT */
+    /* WHATSAPP */
 
     .whatsapp{
       position:fixed;
@@ -439,14 +444,14 @@
       }
 
       .hero-bg-logo{
-        right:50%;
+        left:50%;
         top:50%;
-        transform:translate(50%,-50%);
+        transform:translate(-50%,-50%);
       }
 
       .hero-bg-logo img{
         width:320px;
-        opacity:.18;
+        opacity:.16;
       }
 
     }
