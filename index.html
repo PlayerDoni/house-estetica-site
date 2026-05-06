@@ -38,7 +38,7 @@
 
     .container{
       width:92%;
-      max-width:1200px;
+      max-width:1400px;
       margin:auto;
       position:relative;
       z-index:2;
@@ -109,8 +109,8 @@
 
     .hero-grid{
       display:grid;
-      grid-template-columns:1fr 2fr;
-      gap:30px;
+      grid-template-columns:1fr 1.6fr;
+      gap:20px;
       align-items:center;
     }
 
@@ -191,13 +191,13 @@
       position:relative;
       z-index:2;
 
-      height:760px;
+      height:820px;
 
       display:flex;
       align-items:center;
       justify-content:center;
 
-      overflow:hidden; 
+      overflow:hidden;
     }
 
     .hero-card::before{
@@ -207,15 +207,17 @@
       inset:0;
 
       background:
-      radial-gradient(circle at top right, rgba(212,175,55,.10), transparent 30%);
+      radial-gradient(circle at center, rgba(212,175,55,.12), transparent 60%);
     }
 
     .hero-card img{
       width:100%;
-      max-width:520px;
+      max-width:920px;
       object-fit:contain;
       position:relative;
       z-index:2;
+
+      transform:scale(1.25);
     }
 
     /* LOGO FUNDO MOBILE */
@@ -510,7 +512,7 @@
       }
 
       .hero-bg-logo img{
-        width:520px;
+        width:700px;
         opacity:.16;
         object-fit:contain;
       }
