@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -109,8 +108,8 @@
 
     .hero-grid{
       display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:70px;
+      grid-template-columns:1fr 1.25fr;
+      gap:20px;
       align-items:center;
     }
 
@@ -185,56 +184,46 @@
       color:#000;
     }
 
-    /* CARD DA LOGO */
+    /* HERO LOGO */
 
     .hero-card{
       position:relative;
       z-index:2;
 
-      background:
-      linear-gradient(
-        145deg,
-        rgba(255,255,255,.03),
-        rgba(255,255,255,.01)
-      );
-
-      border:1px solid rgba(212,175,55,.12);
-
-      border-radius:40px;
-
-      padding:40px;
-
-      height:640px;
+      height:760px;
 
       display:flex;
       align-items:center;
       justify-content:center;
 
-      overflow:hidden;
-
-      backdrop-filter:blur(10px);
-
-      box-shadow:
-      0 20px 60px rgba(0,0,0,.45),
-      inset 0 0 60px rgba(212,175,55,.03);
+      overflow:visible;
     }
 
     .hero-card::before{
       content:'';
 
       position:absolute;
-      inset:0;
+      width:700px;
+      height:700px;
 
       background:
-      radial-gradient(circle at top right, rgba(212,175,55,.10), transparent 30%);
+      radial-gradient(circle, rgba(212,175,55,.10), transparent 70%);
+
+      filter:blur(40px);
+
+      z-index:1;
     }
 
     .hero-card img{
       width:100%;
-      max-width:520px;
+      max-width:950px;
+
       object-fit:contain;
+
       position:relative;
       z-index:2;
+
+      transform:scale(1.35);
     }
 
     /* LOGO FUNDO MOBILE */
@@ -499,7 +488,7 @@
         display:none;
       }
 
-      /* ESCONDE CARD */
+      /* ESCONDE LOGO LATERAL */
 
       .hero-card{
         display:none;
@@ -529,8 +518,8 @@
       }
 
       .hero-bg-logo img{
-        width:520px;
-        opacity:.16;
+        width:760px;
+        opacity:.18;
         object-fit:contain;
       }
 
@@ -605,7 +594,7 @@
 
       </div>
 
-      <!-- CARD DA LOGO -->
+      <!-- LOGO -->
 
       <div class="hero-card">
 
@@ -617,214 +606,5 @@
 
   </section>
 
-  <!-- SOBRE -->
-
-  <section id="sobre">
-
-    <div class="container about-grid">
-
-      <div class="about-image">
-        <img src="images/carro1.jpg" alt="">
-      </div>
-
-      <div class="about-content">
-
-        <h2>
-          Cuidado profissional para o seu veículo
-        </h2>
-
-        <p>
-          A House Estética oferece um atendimento diferenciado diretamente na casa do cliente, trazendo praticidade, qualidade e um acabamento impecável.
-        </p>
-
-        <div class="info-card">
-          <h3>Atendimento Delivery</h3>
-
-          <p>
-            Serviço realizado no conforto da sua casa com praticidade e excelência.
-          </p>
-        </div>
-
-        <div class="info-card">
-          <h3>Acabamento Premium</h3>
-
-          <p>
-            Atenção aos mínimos detalhes para entregar um resultado impecável.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- SERVIÇOS -->
-
-  <section id="servicos" class="dark-section">
-
-    <div class="container">
-
-      <div class="section-title">
-
-        <h2>
-          Nossos Serviços
-        </h2>
-
-        <p>
-          Serviços especializados para manter seu veículo sempre impecável.
-        </p>
-
-      </div>
-
-      <div class="services">
-
-        <div class="service-card">
-
-          <div class="service-icon">
-            ✨
-          </div>
-
-          <h3>
-            Lavagem Técnica
-          </h3>
-
-          <p>
-            Limpeza detalhada com foco em acabamento, preservação e estética automotiva premium.
-          </p>
-
-        </div>
-
-        <div class="service-card">
-
-          <div class="service-icon">
-            🧼
-          </div>
-
-          <h3>
-            Higienização Completa
-          </h3>
-
-          <p>
-            Higienização interna completa deixando o ambiente do veículo limpo e agradável.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- GALERIA -->
-
-  <section id="galeria">
-
-    <div class="container">
-
-      <div class="section-title">
-
-        <h2>
-          Galeria
-        </h2>
-
-        <p>
-          Alguns resultados dos serviços realizados.
-        </p>
-
-      </div>
-
-      <div class="gallery">
-
-        <img src="images/carro1.jpg" alt="">
-        <img src="images/carro2.jpg" alt="">
-        <img src="images/carro3.jpg" alt="">
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- CONTATO -->
-
-  <section id="contato" class="dark-section">
-
-    <div class="container">
-
-      <div class="section-title">
-
-        <h2>
-          Agende seu atendimento
-        </h2>
-
-        <p>
-          Entre em contato e deixe seu veículo impecável sem sair de casa.
-        </p>
-
-      </div>
-
-      <div class="contact-grid">
-
-        <div class="contact-box">
-          <h3>WhatsApp</h3>
-          <p>(99) 99999-9999</p>
-        </div>
-
-        <div class="contact-box">
-          <h3>Instagram</h3>
-          <p>@teste</p>
-        </div>
-
-        <div class="contact-box">
-          <h3>Horário</h3>
-          <p>Sábados das 08h às 18h</p>
-        </div>
-
-      </div>
-
-      <div class="address-box">
-
-        <h3 class="gold">
-          Localização
-        </h3>
-
-        <p>
-          Pato Branco - PR<br>
-          Endereço fictício para testes.
-        </p>
-
-        <a
-          href="https://maps.google.com"
-          target="_blank"
-          class="btn btn-primary"
-        >
-          Abrir no Google Maps
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- FOOTER -->
-
-  <footer>
-    © 2026 House Estética — Todos os direitos reservados.
-  </footer>
-
-  <!-- WHATS FLOAT -->
-
-  <a
-    href="https://wa.me/5599999999999"
-    target="_blank"
-    class="whatsapp"
-  >
-    ☎
-  </a>
-
 </body>
 </html>
-```
