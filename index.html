@@ -405,27 +405,47 @@
 
     /* WHATSAPP */
 
+    /* WHATSAPP */
+
     .whatsapp{
       position:fixed;
-      right:20px;
-      bottom:20px;
-      width:65px;
-      height:65px;
-      background:#25d366;
-      border-radius:50%;
+      right:22px;
+      bottom:22px;
+      z-index:999;
+
+      width:78px;
+      height:78px;
+
       display:flex;
       align-items:center;
       justify-content:center;
-      font-size:2rem;
-      text-decoration:none;
-      color:#fff;
-      box-shadow:0 10px 30px rgba(37,211,102,.3);
-      z-index:999;
+
       transition:.3s;
+    }
+
+    .whatsapp img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+
+      filter:
+      drop-shadow(0 10px 25px rgba(0,0,0,.45));
     }
 
     .whatsapp:hover{
       transform:scale(1.08);
+    }
+
+    @media(max-width:900px){
+
+      .whatsapp{
+        width:72px;
+        height:72px;
+
+        right:16px;
+        bottom:16px;
+      }
+
     }
 
     /* MOBILE */
@@ -805,9 +825,9 @@
     target="_blank"
     class="whatsapp"
   >
-    ☎
+     <img src="images/whatsappLogo.png" alt="WhatsApp">
   </a>
-
+    
 </body>
 </html>
 ```
