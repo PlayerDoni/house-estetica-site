@@ -114,8 +114,6 @@
       align-items:center;
     }
 
-    /* TEXTO */
-
     .hero-content{
       position:relative;
       z-index:3;
@@ -162,6 +160,8 @@
       display:inline-flex;
       align-items:center;
       justify-content:center;
+      border:none;
+      cursor:pointer;
     }
 
     .btn-primary{
@@ -190,19 +190,15 @@
     .hero-card{
       position:relative;
       z-index:2;
-
       height:820px;
-
       display:flex;
       align-items:center;
       justify-content:center;
-
       overflow:hidden;
     }
 
     .hero-card::before{
       content:'';
-
       position:absolute;
       inset:0;
 
@@ -216,11 +212,8 @@
       object-fit:contain;
       position:relative;
       z-index:2;
-
       transform:scale(1.25);
     }
-
-    /* LOGO FUNDO MOBILE */
 
     .hero-bg-logo{
       display:none;
@@ -250,11 +243,6 @@
       grid-template-columns:1fr 1fr;
       gap:60px;
       align-items:center;
-    }
-
-    .about-image{
-      width:100%;
-      height:100%;
     }
 
     .about-image img{
@@ -336,6 +324,67 @@
       line-height:1.7;
     }
 
+    /* FORM */
+
+    .form-section{
+      background:#050505;
+    }
+
+    .form-wrapper{
+      max-width:850px;
+      margin:auto;
+      background:#0b0b0b;
+      border:1px solid rgba(212,175,55,.12);
+      padding:50px;
+      border-radius:35px;
+    }
+
+    .form-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+    }
+
+    .input-group{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      margin-bottom:20px;
+    }
+
+    .input-group.full{
+      grid-column:1 / -1;
+    }
+
+    .input-group label{
+      color:#d4af37;
+      font-size:.95rem;
+    }
+
+    .input-group input,
+    .input-group select,
+    .input-group textarea{
+      background:#111;
+      border:1px solid rgba(255,255,255,.06);
+      border-radius:18px;
+      padding:18px;
+      color:#fff;
+      font-family:'Inter',sans-serif;
+      font-size:1rem;
+      outline:none;
+    }
+
+    .input-group textarea{
+      min-height:140px;
+      resize:none;
+    }
+
+    .input-group input:focus,
+    .input-group select:focus,
+    .input-group textarea:focus{
+      border-color:#d4af37;
+    }
+
     /* GALLERY */
 
     .gallery{
@@ -405,21 +454,16 @@
 
     /* WHATSAPP */
 
-    /* WHATSAPP */
-
     .whatsapp{
       position:fixed;
       right:22px;
       bottom:22px;
       z-index:999;
-
       width:78px;
       height:78px;
-
       display:flex;
       align-items:center;
       justify-content:center;
-
       transition:.3s;
     }
 
@@ -427,25 +471,11 @@
       width:100%;
       height:100%;
       object-fit:contain;
-
-      filter:
-      drop-shadow(0 10px 25px rgba(0,0,0,.45));
+      filter:drop-shadow(0 10px 25px rgba(0,0,0,.45));
     }
 
     .whatsapp:hover{
       transform:scale(1.08);
-    }
-
-    @media(max-width:900px){
-
-      .whatsapp{
-        width:72px;
-        height:72px;
-
-        right:16px;
-        bottom:16px;
-      }
-
     }
 
     /* MOBILE */
@@ -466,11 +496,6 @@
         grid-template-columns:1fr;
       }
 
-      .hero-content{
-        position:relative;
-        z-index:3;
-      }
-
       .hero h1{
         font-size:3.8rem;
       }
@@ -489,6 +514,14 @@
         grid-template-columns:1fr;
       }
 
+      .form-grid{
+        grid-template-columns:1fr;
+      }
+
+      .form-wrapper{
+        padding:30px;
+      }
+
       .section-title h2,
       .about-content h2{
         font-size:2.3rem;
@@ -502,32 +535,21 @@
         display:none;
       }
 
-      /* ESCONDE CARD */
-
       .hero-card{
         display:none;
       }
 
-      /* LOGO FUNDO */
-
       .hero-bg-logo{
         display:flex;
-
         position:absolute;
-
         left:50%;
         top:50%;
-
         transform:translate(-50%,-50%);
-
         width:100%;
         height:100%;
-
         justify-content:center;
         align-items:center;
-
         z-index:1;
-
         pointer-events:none;
       }
 
@@ -537,10 +559,16 @@
         object-fit:contain;
       }
 
+      .whatsapp{
+        width:68px;
+        height:68px;
+        right:14px;
+        bottom:14px;
+      }
+
     }
 
   </style>
-
 </head>
 
 <body>
@@ -558,6 +586,7 @@
       <div class="nav-links">
         <a href="#sobre">Sobre</a>
         <a href="#servicos">Serviços</a>
+        <a href="#solicitar">Solicitar</a>
         <a href="#galeria">Galeria</a>
         <a href="#contato">Contato</a>
       </div>
@@ -570,15 +599,11 @@
 
   <section class="hero">
 
-    <!-- FUNDO MOBILE -->
-
     <div class="hero-bg-logo">
       <img src="images/logo.png" alt="Logo House Estética">
     </div>
 
     <div class="container hero-grid">
-
-      <!-- TEXTO -->
 
       <div class="hero-content">
 
@@ -596,8 +621,8 @@
 
         <div class="buttons">
 
-          <a href="https://wa.me/5599999999999" target="_blank" class="btn btn-primary">
-            Agendar pelo WhatsApp
+          <a href="#solicitar" class="btn btn-primary">
+            Solicitar Atendimento
           </a>
 
           <a href="#servicos" class="btn btn-outline">
@@ -608,12 +633,8 @@
 
       </div>
 
-      <!-- CARD DA LOGO -->
-
       <div class="hero-card">
-
         <img src="images/logo.png" alt="Logo House Estética">
-
       </div>
 
     </div>
@@ -684,13 +705,9 @@
 
         <div class="service-card">
 
-          <div class="service-icon">
-            ✨
-          </div>
+          <div class="service-icon">✨</div>
 
-          <h3>
-            Lavagem Técnica
-          </h3>
+          <h3>Lavagem Técnica</h3>
 
           <p>
             Limpeza detalhada com foco em acabamento, preservação e estética automotiva premium.
@@ -700,19 +717,115 @@
 
         <div class="service-card">
 
-          <div class="service-icon">
-            🧼
-          </div>
+          <div class="service-icon">🧼</div>
 
-          <h3>
-            Higienização Completa
-          </h3>
+          <h3>Higienização Completa</h3>
 
           <p>
             Higienização interna completa deixando o ambiente do veículo limpo e agradável.
           </p>
 
         </div>
+
+        <div class="service-card">
+
+          <div class="service-icon">🪞</div>
+
+          <h3>Polimento</h3>
+
+          <p>
+            Realce de brilho e revitalização da pintura com acabamento premium.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FORMULÁRIO -->
+
+  <section id="solicitar" class="form-section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>
+          Solicitar Atendimento
+        </h2>
+
+        <p>
+          Preencha os dados abaixo e envie sua solicitação diretamente pelo WhatsApp.
+        </p>
+
+      </div>
+
+      <div class="form-wrapper">
+
+        <form id="serviceForm">
+
+          <div class="form-grid">
+
+            <div class="input-group">
+              <label>Nome</label>
+              <input type="text" id="nome" required>
+            </div>
+
+            <div class="input-group">
+              <label>Telefone</label>
+              <input type="text" id="telefone" required>
+            </div>
+
+            <div class="input-group">
+              <label>Serviço desejado</label>
+
+              <select id="servico" required>
+                <option value="">Selecione</option>
+                <option>Lavagem Técnica</option>
+                <option>Higienização Completa</option>
+                <option>Polimento</option>
+              </select>
+            </div>
+
+            <div class="input-group">
+              <label>Veículo</label>
+              <input type="text" id="veiculo" required>
+            </div>
+
+            <div class="input-group">
+              <label>Rua e número</label>
+              <input type="text" id="rua" required>
+            </div>
+
+            <div class="input-group">
+              <label>Bairro</label>
+              <input type="text" id="bairro" required>
+            </div>
+
+            <div class="input-group full">
+              <label>Cidade</label>
+              <input type="text" id="cidade" required>
+            </div>
+
+            <div class="input-group full">
+              <label>Observações</label>
+              <textarea id="observacoes"></textarea>
+            </div>
+
+            <div class="input-group full">
+
+              <button type="submit" class="btn btn-primary">
+                Solicitar Atendimento
+              </button>
+
+            </div>
+
+          </div>
+
+        </form>
 
       </div>
 
@@ -787,32 +900,9 @@
 
       </div>
 
-      <div class="address-box">
-
-        <h3 class="gold">
-          Localização
-        </h3>
-
-        <p>
-          Pato Branco - PR<br>
-          Endereço fictício para testes.
-        </p>
-
-        <a
-          href="https://maps.google.com"
-          target="_blank"
-          class="btn btn-primary"
-        >
-          Abrir no Google Maps
-        </a>
-
-      </div>
-
     </div>
 
   </section>
-
-  <!-- FOOTER -->
 
   <footer>
     © 2026 House Estética — Todos os direitos reservados.
@@ -825,9 +915,56 @@
     target="_blank"
     class="whatsapp"
   >
-     <img src="images/whatsappLogo.png" alt="WhatsApp">
+    <img src="images/whatsappLogo.png" alt="WhatsApp">
   </a>
-    
+
+  <script>
+
+    const form = document.getElementById('serviceForm');
+
+    form.addEventListener('submit', function(e){
+
+      e.preventDefault();
+
+      const nome = document.getElementById('nome').value;
+      const telefone = document.getElementById('telefone').value;
+      const servico = document.getElementById('servico').value;
+      const veiculo = document.getElementById('veiculo').value;
+      const rua = document.getElementById('rua').value;
+      const bairro = document.getElementById('bairro').value;
+      const cidade = document.getElementById('cidade').value;
+      const observacoes = document.getElementById('observacoes').value;
+
+      const mensagem =
+`Olá! Gostaria de solicitar um atendimento 🚗
+
+*Nome:* ${nome}
+*Telefone:* ${telefone}
+
+*Serviço:* ${servico}
+
+*Veículo:* ${veiculo}
+
+*Endereço:*
+${rua}
+${bairro}
+${cidade}
+
+*Observações:*
+${observacoes}
+
+Aguardo retorno 😊`;
+
+      const telefoneWhatsapp = '5599999999999';
+
+      const url = `https://wa.me/${telefoneWhatsapp}?text=${encodeURIComponent(mensagem)}`;
+
+      window.open(url, '_blank');
+
+    });
+
+  </script>
+
 </body>
 </html>
 ```
